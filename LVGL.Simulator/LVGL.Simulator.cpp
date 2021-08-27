@@ -1,4 +1,4 @@
-﻿/*
+/*
  * PROJECT:   LVGL PC Simulator using Visual Studio
  * FILE:      LVGL.Simulator.cpp
  * PURPOSE:   Implementation for LVGL ported to Windows Desktop
@@ -460,7 +460,7 @@ int main()
         lv_fs_dir_close(&d);
     }
 
-    lv_demo_widgets();           // ok
+    //lv_demo_widgets();           // ok
     // lv_demo_benchmark();
     // lv_demo_keypad_encoder();    // ok
     // lv_demo_music();             // removed from repository
@@ -561,7 +561,7 @@ int main()
     // lv_example_img_3();
     // lv_example_img_4();         // ok
 
-    // lv_example_imgbtn_1();
+    lv_example_imgbtn_1();
 
     // lv_example_keyboard_1();    // ok
 

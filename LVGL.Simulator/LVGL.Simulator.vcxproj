@@ -158,6 +158,9 @@
     <ClInclude Include="lvgl\lv_conf_template.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="book_left.c" />
+    <ClCompile Include="book_mid.c" />
+    <ClCompile Include="book_right.c" />
     <ClCompile Include="lvgl\examples\anim\lv_example_anim_1.c" />
     <ClCompile Include="lvgl\examples\anim\lv_example_anim_2.c" />
     <ClCompile Include="lvgl\examples\anim\lv_example_anim_3.c" />
