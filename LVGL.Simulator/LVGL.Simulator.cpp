@@ -400,8 +400,8 @@ int main()
     if (!lv_win32_init(
         GetModuleHandleW(NULL),
         SW_SHOW,
-        800,
-        480,
+        240,
+        135,
         LoadIconW(GetModuleHandleW(NULL), MAKEINTRESOURCE(IDI_LVGL))))
     {
         return -1;
@@ -563,6 +563,25 @@ int main()
 
     lv_example_imgbtn_1();
 
+    
+    /*lv_coord_t a = 20;
+    lv_coord_t b = -30;
+
+
+    for (lv_coord_t i = b; i < a; i++)
+    {
+        printf("%d\n", i);
+    }
+
+
+    if (a > b) {
+        printf("a > b\n");
+    } else if (a < b) {
+        printf("a < b\n");
+    } else {
+        printf("a == b\n");
+    }*/
+
     // lv_example_keyboard_1();    // ok
 
     // lv_example_label_1();
@@ -618,6 +637,8 @@ int main()
         lv_task_handler();
         Sleep(1);
     }
+
+
 
     return 0;
 }

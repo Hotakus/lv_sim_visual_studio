@@ -5,6 +5,13 @@
     <RootNamespace>LVGL</RootNamespace>
     <MileProjectType>ConsoleApplication</MileProjectType>
     <MileProjectManifestFile>LVGL.Simulator.manifest</MileProjectManifestFile>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="Mile.Project\Mile.Project.props" />
   <Import Project="Mile.Project\Mile.Project.Runtime.VC-LTL.props" />
@@ -18,7 +25,9 @@
       <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)'=='Release'">MinSpace</Optimization>
+      <Optimization Condition="'$(Configuration)'=='Release'">Disabled</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IntrinsicFunctions>
+      <LanguageStandard_C Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdc17</LanguageStandard_C>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
